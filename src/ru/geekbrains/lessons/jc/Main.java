@@ -17,5 +17,11 @@ public class Main {
         testCsvFile.addData(data);
 
         testCsvFile.save();
+
+        CSVFile testCsvFile2 = new CSVFile("test file");
+        testCsvFile2.load();
+        String []header_rename = new String[]{"Value x", "Value y","Value z"};
+        testCsvFile2.addHeader(header_rename);
+        testCsvFile2.save();
     }
 }
